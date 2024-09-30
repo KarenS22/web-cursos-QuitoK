@@ -113,6 +113,12 @@ body {
     padding-top: 3px;
 }
 
+.buttons:hover{
+    background: #fff;
+    color:  #1e8449;
+    border: 1px solid #8fd1ae;
+}
+
 .container .course-container .course:hover {
     outline: .2rem solid #8fd1ae;
     outline-offset: 0;

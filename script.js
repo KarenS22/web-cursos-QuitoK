@@ -45,7 +45,7 @@ function addCourseToPage(course) {
     newCourse.classList.add('course');
     newCourse.setAttribute('data-name', `p-${courseCount}`);
     newCourse.innerHTML = `
-       <img src="images/buscar.png" alt="">
+       <img src="images/newCourse.png" alt="">
        <h3>${course.title}</h3>
        <p><span class="info">Profesor:</span> ${course.profesor}</p>
        <p><span class="info">Fecha de inicio:</span> ${course.date}</p>
@@ -60,7 +60,7 @@ function addCourseToPage(course) {
     newPreview.setAttribute('data-target', `p-${courseCount}`);
     newPreview.innerHTML = `
        <i class="fas fa-times"></i>
-       <img src="images/buscar.png" alt="">
+       <img src="images/newCourse.png" alt="">
        <h3>${course.title}</h3>
        <div class="preview-content">
            <p><span class="info">Profesor:</span> ${course.profesor}</p>

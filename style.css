@@ -5,21 +5,22 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
-    outline: none; border:none;
-   text-decoration: none;
-   transition: all .2s linear;
-   text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform: capitalize;
 
 }
 
-html{
+html {
     font-size: 62.5%;
     overflow-x: hidden;
- }
- 
- body{
+}
+
+body {
     background: #eee;
- }
+}
 
 .header {
     background-color: #8fd1ae;
@@ -53,28 +54,28 @@ html{
     border-radius: 15px;
 }
 
-.container{
+.container {
     max-width: 1200px;
-    margin:0 auto;
-    padding:3rem 2rem;
- }
- 
- .title{
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.title {
     font-size: 3.5rem;
-    color:#444;
+    color: #444;
     margin-bottom: 3rem;
     text-transform: uppercase;
     text-align: center;
- }
+}
 
 
- .container .curse-container{
+.container .course-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 2rem;
- }
+}
 
-.container .curse-container .curse{
+.container .course-container .course {
     text-align: center;
     padding: 3rem 2rem;
     background: #fff;
@@ -85,34 +86,168 @@ html{
     border-radius: 15px;
 }
 
-.container .curse-container .curse .info{
+.info {
     font-weight: bold;
 }
 
-.container .curse-container .curse p{
+.container .course-container .course p {
     font-size: 1.5rem;
 }
 
-.container .curse-container .curse img{
+.container .course-container .course img {
     height: 175px;
- }
+}
 
- .container .curse-container .curse:hover{
+.buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #8fd1ae;
+    width: 130px;
+    border-radius: 15px;
+    margin: auto;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+    padding-top: 3px;
+}
+
+.container .course-container .course:hover {
     outline: .2rem solid #8fd1ae;
     outline-offset: 0;
- }
- 
- .container .curse-container .curse:hover img{
+}
+
+.container .course-container .course:hover img {
     transform: scale(.9);
+}
+
+ h3 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+}
+
+.container .course-container .course:hover h3 {
+    color: #8fd1ae;
+}
+
+.course-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-preview .preview {
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin: 2rem;
+    width: 40rem;
+    border-radius: 15px;
+}
+
+.course-preview .preview.active {
+    display: inline-block;
+}
+
+
+.course-preview .preview img {
+    height: 150px;
+}
+
+.course-preview .preview .fa-times{
+    position: absolute;
+    top:1rem; right:1.5rem;
+    cursor: pointer;
+    color:#444;
+    font-size: 4rem;
  }
  
- .container .curse-container .curse h3{
-    padding:.5rem 0;
-    font-size: 2rem;
-    color:#444;
+ .course-preview .preview .fa-times:hover{
+    transform: rotate(90deg);
  }
 
- .container .curse-container .curse:hover h3{
-    color:#8fd1ae;
- }
+
+.course-preview .preview .preview-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+}
+
+ .form-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.form label {
+    font-size: 1.6rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-transform: none;
+    
+}
+
+.form textarea {
+    height: 120px;
+}
+
+.footer {
+    background-color: #8fd1ae;
+    padding: 20px 0;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.footer p strong {
+    color: #fff;
+}
+
+
 

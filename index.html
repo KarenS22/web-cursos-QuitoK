@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Cursos online</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/4c58adf8ae.js" crossorigin="anonymous"></script>
 
 </head>
@@ -26,49 +27,241 @@
     </header>
 
     <div class="container">
-        <h3 class="title">Cursos Online</h3>
+        <h1 class="title">Cursos Online</h1>
 
-        <div class="curse-container" id="cursos">
-            <div class="curse">
-                <img src="images/buscar.png" alt="">
-                <h3>Diseño UX/UI</h3>
-                <p ><span class="info">Profesor:</span> Juan Perez</p>
-                <p ><span class="info">Fecha de inicio:</span> 05/10/2024</p>
-                <p ><span class="info">Duración: </span> 3 meses</p>
-            </div>
-
-            <div class="curse">
-                <img src="images/buscar.png" alt="">
-                <h3>Diseño UX/UI</h3>
-                <p ><span class="info">Profesor:</span> Juan Perez</p>
-                <p ><span class="info">Fecha de inicio:</span> 05/10/2024</p>
-                <p ><span class="info">Duración: </span> 3 meses</p>
-            </div>
-
-            <div class="curse">
+        <div class="course-container" id="cursos">
+            <div class="course" data-name="p-1">
                 <img src="images/buscar.png" alt="">
                 <h3>Diseño UX/UI</h3>
                 <p><span class="info">Profesor:</span> Juan Perez</p>
                 <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
-                <p><span class="info">Duración: </span> 3 meses</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-2">
+                <img src="images/buscar.png" alt="">
+                <h3>Redacción Académica</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-3">
+                <img src="images/buscar.png" alt="">
+                <h3>Introducción a Big Data</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-4">
+                <img src="images/buscar.png" alt="">
+                <h3>JavaScript Básico</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-5">
+                <img src="images/buscar.png" alt="">
+                <h3>Introducción a WordPress</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-6">
+                <img src="images/buscar.png" alt="">
+                <h3>Inglés Conversacional</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-7">
+                <img src="images/buscar.png" alt="">
+                <h3>Diseño Gráfico con Adobe Illustrator</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-8">
+                <img src="images/buscar.png" alt="">
+                <h3>Contabilidad Básica para Emprendedores</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
+            </div>
+
+            <div class="course" data-name="p-9">
+                <img src="images/buscar.png" alt="">
+                <h3>Animación 2D</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p> <br>
+                <p class="buttons"> Más información </p>
             </div>
         </div>
     </div>
 
-    <div id="addCursos">
+    <div id="addCursos" class="form-container">
         <h3>Agregar nuevo curso</h3>
-        <form>
-            <label for="nombreCurso">Nombre del curso:</label>
-            <input type="text" id="nombreCurso" name="nombreCurso">
+        <form id="add-course-form" class="form">
+            <label for="course-title">Nombre del curso:</label>
+            <input type="text" id="course-title" required>
 
-    </div>
-    <div>
-        <div class="footer" id="contacto">
-            <p>Todos los derechos reservados &copy; 2021</p>
-    
+            <label for="course-profesor">Nombre del profesor:</label>
+            <input type="text" id="course-profesor" required>
+
+            <label for="course-date">Fecha de inicio:</label>
+            <input type="date" id="course-date" required>
+
+            <label for="course-duration">Duración (en meses):</label>
+            <input type="number" id="course-duration" required>
+
+            <label for="course-description">Descripción:</label>
+            <textarea id="course-description" required></textarea>
+
+            <button type="submit" class="buttons">Agregar Curso</button>
+        </form>
     </div>
 
-        
+    <footer class="footer" id="contacto">
+        <div class="footer-container">
+            <p><strong>Nombre:</strong> Karen Quito</p>
+            <p><strong>Asignatura:</strong> Programación y Plataformas Web</p>
+            <p><strong>Periodo:</strong> 65</p>
+          </div>
+
+    </footer>
+
+
+    <div class="course-preview">
+        <div class="preview" data-target="p-1">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Diseño UX/UI</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Descubre cómo crear interfaces de usuario atractivas y mejorar la experiencia de usuario en aplicaciones
+                y sitios web.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-2">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Redacción Académica</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Aprende a escribir ensayos, artículos y tesis de manera clara y profesional para el ámbito académico.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-3">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Introducción a Big Data</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Conoce los principios de Big Data y cómo utilizar el análisis de grandes volúmenes de datos en diferentes
+                sectores.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-4">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>JavaScript Básico</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Domina los fundamentos de JavaScript y empieza a desarrollar sitios web interactivos.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+
+        <div class="preview" data-target="p-5">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Introducción a WordPress</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Aprende a crear y gestionar sitios web usando WordPress, una de las plataformas más populares.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-6">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Inglés Conversacional</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Mejora tu fluidez en inglés con lecciones prácticas de conversación y vocabulario cotidiano.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-7">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Diseño Gráfico con Adobe Illustrator</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Domina las herramientas de Adobe Illustrator para crear ilustraciones vectoriales, logotipos y diseños
+                visualmente atractivos. Ideal para aspirantes a diseñadores gráficos o creativos digitales.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-8">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Contabilidad Básica para Emprendedores</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Un curso diseñado para emprendedores y pequeños empresarios que necesitan entender los principios básicos
+                de la contabilidad, como balance de cuentas, flujo de caja y gestión financiera.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+        <div class="preview" data-target="p-9">
+            <i class="fas fa-times"></i>
+            <img src="images/buscar.png" alt="">
+            <h3>Animación 2D</h3>
+            <div class="preview-content">
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+            <p>Aprende a crear animaciones en 2D utilizando software como Adobe Animate o Toon Boom.</p>
+            <p class="buttons"> <i class="fa-solid fa-user-plus"></i>Registrarse</p>
+        </div>
+    </div>
+
+
 
 
 </body>

@@ -4,9 +4,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
 
 }
 
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+ }
+ 
+ body{
+    background: #eee;
+ }
 
 .header {
     background-color: #8fd1ae;
@@ -19,6 +32,7 @@
     background-color: #8fd1ae;
     font-family: "Lato", sans-serif;
     display: inline-flex;
+    font-size: 20px;
 }
 
 .menu a {
@@ -52,3 +66,53 @@
     text-transform: uppercase;
     text-align: center;
  }
+
+
+ .container .curse-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+ }
+
+.container .curse-container .curse{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.container .curse-container .curse .info{
+    font-weight: bold;
+}
+
+.container .curse-container .curse p{
+    font-size: 1.5rem;
+}
+
+.container .curse-container .curse img{
+    height: 175px;
+ }
+
+ .container .curse-container .curse:hover{
+    outline: .2rem solid #8fd1ae;
+    outline-offset: 0;
+ }
+ 
+ .container .curse-container .curse:hover img{
+    transform: scale(.9);
+ }
+ 
+ .container .curse-container .curse h3{
+    padding:.5rem 0;
+    font-size: 2rem;
+    color:#444;
+ }
+
+ .container .curse-container .curse:hover h3{
+    color:#8fd1ae;
+ }
+

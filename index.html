@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/4c58adf8ae.js" crossorigin="anonymous"></script>
 
- </head>
+</head>
 
 <body>
 
@@ -17,9 +17,9 @@
         <div class="menu">
             <nav>
                 <a class="active" href="#"><i class="fa-solid fa-house"></i> home</a>
-                <a href="#">Cursos</a>
-                <a href="#">About</a>
-                <a href="#">Contact Us</a>
+                <a href="#cursos"> <i class="fa-solid fa-book"></i> Cursos</a>
+                <a href="#addCursos"> <i class="fa-solid fa-circle-plus"></i> Add cursos</a>
+                <a href="#contacto"> <i class="fa-solid fa-info"></i> Contact Us</a>
             </nav>
         </div>
 
@@ -27,8 +27,48 @@
 
     <div class="container">
         <h3 class="title">Cursos Online</h3>
+
+        <div class="curse-container" id="cursos">
+            <div class="curse">
+                <img src="images/buscar.png" alt="">
+                <h3>Diseño UX/UI</h3>
+                <p ><span class="info">Profesor:</span> Juan Perez</p>
+                <p ><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p ><span class="info">Duración: </span> 3 meses</p>
+            </div>
+
+            <div class="curse">
+                <img src="images/buscar.png" alt="">
+                <h3>Diseño UX/UI</h3>
+                <p ><span class="info">Profesor:</span> Juan Perez</p>
+                <p ><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p ><span class="info">Duración: </span> 3 meses</p>
+            </div>
+
+            <div class="curse">
+                <img src="images/buscar.png" alt="">
+                <h3>Diseño UX/UI</h3>
+                <p><span class="info">Profesor:</span> Juan Perez</p>
+                <p><span class="info">Fecha de inicio:</span> 05/10/2024</p>
+                <p><span class="info">Duración: </span> 3 meses</p>
+            </div>
+        </div>
     </div>
 
+    <div id="addCursos">
+        <h3>Agregar nuevo curso</h3>
+        <form>
+            <label for="nombreCurso">Nombre del curso:</label>
+            <input type="text" id="nombreCurso" name="nombreCurso">
+
+    </div>
+    <div>
+        <div class="footer" id="contacto">
+            <p>Todos los derechos reservados &copy; 2021</p>
+    
+    </div>
+
+        
 
 
 </body>
